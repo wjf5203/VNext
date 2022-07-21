@@ -1,0 +1,65 @@
+MODEL:
+  META_ARCHITECTURE: "SeqFormer"
+  PIXEL_MEAN: [123.675, 116.280, 103.530]
+  PIXEL_STD: [58.395, 57.120, 57.375]
+  MASK_ON: True
+  BACKBONE:
+    NAME: "D2SwinTransformer"
+  SWIN:
+    EMBED_DIM: 192
+    DEPTHS: [2, 2, 18, 2]
+    NUM_HEADS: [6, 12, 24, 48]
+    WINDOW_SIZE: 12
+    APE: False
+    DROP_PATH_RATE: 0.3
+    PATCH_NORM: True
+    PRETRAIN_IMG_SIZE: 384
+  WEIGHTS: "converted_IDOL_full_coco_swinv1.pth"
+  SeqFormer:
+    NUM_CLASSES: 40
+    MULTI_CLS_ON: True
+    APPLY_CLS_THRES: 0.05
+    CLIP_MATCHING: False
+    CLIP_LENGTH: 5
+    CLIP_STRIDE: 1
+DATASETS:
+  TRAIN: ("ytvis_2019_train",)
+  TEST: ("ytvis_2019_val",)
+SOLVER:
+  IMS_PER_BATCH: 16
+  BASE_LR: 0.0002
+  STEPS: (8000,)
+  MAX_ITER: 12000
+  WARMUP_FACTOR: 1.0
+  WARMUP_ITERS: 10
+  WEIGHT_DECAY: 0.0001
+  OPTIMIZER: "ADAMW"
+  BACKBONE_MULTIPLIER: 0.1
+  CLIP_GRADIENTS:
+    ENABLED: True
+    CLIP_TYPE: "full_model"
+    CLIP_VALUE: 0.01
+    NORM_TYPE: 2.0
+  CHECKPOINT_PERIOD: 1000
+INPUT:
+  SAMPLING_FRAME_NUM: 5
+  SAMPLING_FRAME_RANGE:  15
+  # MIN_SIZE_TRAIN_SAMPLING : ["range", "choice", "range_by_clip", "choice_by_clip"]
+  MIN_SIZE_TRAIN_SAMPLING: "choice_by_clip"
+  # RANDOM_FLIP : ["none", "horizontal", "flip_by_clip"]. "horizontal" is set by default.
+  RANDOM_FLIP: "flip_by_clip"
+  AUGMENTATIONS: []
+  # MIN_SIZE_TRAIN: (360, 480)
+  MIN_SIZE_TRAIN: (320, 352, 392, 416, 448, 480, 512, 544, 576, 608, 640)
+  MAX_SIZE_TRAIN: 768
+  MIN_SIZE_TEST: 480
+  CROP:
+    ENABLED: False
+    TYPE: "absolute_range"
+    SIZE: (384, 600)
+  FORMAT: "RGB"
+DATALOADER:
+  FILTER_EMPTY_ANNOTATIONS: False
+  NUM_WORKERS: 8
+VERSION: 2
+OUTPUT_DIR: ./Swin_test

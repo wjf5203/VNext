@@ -1,0 +1,12 @@
+pycocotools
+tqdm
+cython
+scipy
+timm
+imgaug
+opencv-python
+
+
+
+
+
