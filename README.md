@@ -8,9 +8,9 @@ VNext is a **Next**-generation **V**ideo instance recognition framework on top o
 
 To date, VNext contains the official implementation of the following algorithms:
 
-IDOL: In Defense of Online Models for Video Instance Segmentation
+IDOL: In Defense of Online Models for Video Instance Segmentation (ECCV2022 Oral)
 
-SeqFormer: Sequential Transformer for Video Instance Segmentation
+SeqFormer: Sequential Transformer for Video Instance Segmentation (ECCV2022 Oral)
 
 
 
@@ -18,7 +18,7 @@ SeqFormer: Sequential Transformer for Video Instance Segmentation
 
 - IDOL is accepted to ECCV 2022 as an **oral presentation**!
 - SeqFormer is accepted to ECCV 2022 as an **oral presentation**!
-- IDOL  won **first place** in the video instance segmentation track of the 4th Large-scale Video Object Segmentation Challenge (CVPR2022).
+- IDOL won **first place** in the video instance segmentation track of the 4th Large-scale Video Object Segmentation Challenge (CVPR2022).
 
 
 ## Getting started
