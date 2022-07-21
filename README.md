@@ -24,9 +24,9 @@ SeqFormer: Sequential Transformer for Video Instance Segmentation
 ## Getting started
 
 1. For Installation and data preparation, please refer to  to [INSTALL.md](./INSTALL.md) for more details.
-2. For IDOL training and model zoo, please refer to [IDOL.md](./projects/IDOL/IDOL.md)
+2. For IDOL training, evaluation, and model zoo, please refer to [IDOL.md](./projects/IDOL/IDOL.md)
 
-3. For SeqFormer training and model zoo, please refer to [SeqFormer.md](./projects/SeqFormer/SeqFormer.md)
+3. For SeqFormer training, evaluation and model zoo, please refer to [SeqFormer.md](./projects/SeqFormer/SeqFormer.md)
 
 
 
