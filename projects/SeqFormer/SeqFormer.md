@@ -18,7 +18,7 @@ Train on YouTube-VIS 2019, evaluate on YouTube-VIS 2019.
 | R101  |      |      |      |      |      |          |
 | SwinL |      |      |      |      |      |          |
 
-Model Zoo of SeqFormer is comming soon!
+Model Zoo of SeqFormer is in preparation.
 
 
 
