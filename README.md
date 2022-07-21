@@ -21,6 +21,15 @@ SeqFormer: Sequential Transformer for Video Instance Segmentation
 - IDOL  won **first place** in the video instance segmentation track of the 4th Large-scale Video Object Segmentation Challenge (CVPR2022).
 
 
+## Getting started
+
+1. For Installation and data preparation, please refer to  to [INSTALL.md](./INSTALL.md) for more details.
+2. For IDOL training and model zoo, please refer to [IDOL.md](./projects/IDOL/IDOL.md)
+
+3. For SeqFormer training and model zoo, please refer to [SeqFormer.md](./projects/SeqFormer/SeqFormer.md)
+
+
+
 
 ## IDOL
 
@@ -109,12 +118,6 @@ In this work, we present SeqFormer for video instance segmentation. SeqFormer fo
 
 #### 
 
-## Getting started
-
-1. For Installation and data preparation, please refer to  to [INSTALL.md](./INSTALL.md) for more details.
-2. For IDOL training and model zoo, please refer to [IDOL.md](./projects/IDOL/IDOL.md)
-
-3. For SeqFormer training and model zoo, please refer to [SeqFormer.md](./projects/SeqFormer/SeqFormer.md)
 
 
 
