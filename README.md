@@ -112,9 +112,9 @@ In this work, we present SeqFormer for video instance segmentation. SeqFormer fo
 ## Getting started
 
 1. For Installation and data preparation, please refer to  to [INSTALL.md](./INSTALL.md) for more details.
-2. For IDOL training and model zoo, please refer to [IDOL.md](IDOL.md)
+2. For IDOL training and model zoo, please refer to [IDOL.md](./projects/IDOL/IDOL.md)
 
-3. For SeqFormer training and model zoo, please refer to [SeqFormer.md](SeqFormer.md)
+3. For SeqFormer training and model zoo, please refer to [SeqFormer.md](./projects/SeqFormer/SeqFormer.md)
 
 
 
