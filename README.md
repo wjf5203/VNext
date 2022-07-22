@@ -2,6 +2,16 @@
 
 
 
+
+
+<p align="center"><img src="assets/VNext.png" width="600"/></p>
+
+
+
+
+
+
+
 - VNext is a **Next**-generation **V**ideo instance recognition framework on top of [Detectron2](https://github.com/facebookresearch/detectron2). 
 - Currently it provides advanced online and offline video instance segmentation algorithms. 
 - We will continue to update and improve it to provide a unified and efficient framework for the field of video instance recognition to nourish this field.
