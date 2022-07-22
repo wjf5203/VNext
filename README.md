@@ -47,6 +47,17 @@ In recent years, video instance segmentation (VIS) has been largely advanced by 
 
  
 
+### Visualization results on OVIS valid set
+
+ 
+
+<img src="assets/IDOL/vid_2.gif" width="400"/><img src="assets/IDOL/vid_61.gif" width="400"/>
+<img src="assets/IDOL/vid_96.gif" width="400"/><img src="assets/IDOL/vid_116.gif" width="400"/>
+
+
+
+
+
 ### Quantitative results
 
 #### YouTube-VIS 2019
