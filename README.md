@@ -35,11 +35,20 @@ SeqFormer: Sequential Transformer for Video Instance Segmentation (ECCV2022 Oral
 
 ## IDOL
 
+[In Defense of Online Models for Video Instance Segmentation](https://arxiv.org/abs/2207.10661)
+
+Junfeng Wu, Qihao Liu, Yi Jiang, Song Bai, Alan Yuille, Xiang Bai
 
 
-### Abstract
+### Introduction
 
-In recent years, video instance segmentation (VIS) has been largely advanced by offline models, while online models gradually attracted less attention possibly due to their inferior performance. However, online methods have their inherent advantage in handling long video sequences and ongoing videos while offline models fail due to the limit of computational resources. Therefore, it would be highly desirable if online models can achieve comparable or even better performance than offline models. By dissecting current online models and offline models, we demonstrate that the main cause of the performance gap is the error-prone association between frames caused by the similar appearance among different instances in the feature space. Observing this, we propose an online framework based on contrastive learning that is able to learn more discriminative instance embeddings for association and fully exploit history information for stability. Despite its simplicity, our method outperforms all online and offline methods on three benchmarks. Specifically, we achieve 49.5 AP on YouTube-VIS 2019, a significant improvement of 13.2 AP and 2.1 AP over the prior online and offline art, respectively. Moreover, we achieve 30.2 AP on OVIS, a more challenging dataset with significant crowding and occlusions, surpassing the prior art by 14.8 AP.  The proposed method won **first place** in the video instance segmentation track of the 4th Large-scale Video Object Segmentation Challenge (CVPR2022). We hope the simplicity and effectiveness of our method, as well as our insight on current methods, could shed light on the exploration of VIS models.
+
+- In recent years, video instance segmentation (VIS) has been largely advanced by offline models, while online models are usually inferior to the contemporaneous offline models by over 10 AP, which is a huge drawback.
+
+- By dissecting current online models and offline models, we demonstrate that the main cause of the performance gap is the error-prone association and  propose IDOL, which outperforms all online and offline methods on three benchmarks. 
+
+- IDOL won first place in the video instance segmentation track of the 4th Large-scale Video Object Segmentation Challenge (CVPR2022). 
+
 
 
 
@@ -92,13 +101,12 @@ Junfeng Wu, Yi Jiang, Song Bai, Wenqing Zhang, Xiang Bai
 
 
 
-### Abstract
+### Introduction
 
-- In recent years, video instance segmentation (VIS) has been largely advanced by offline models, while online models are usually inferior to the contemporaneous offline models by over 10 AP, which is a huge drawback.
 
-- By dissecting current online models and offline models, we demonstrate that the main cause of the performance gap is the error-prone association and  propose IDOL, which outperforms all online and offline methods on three benchmarks. 
+- SeqFormer locates an instance in each frame and aggregates temporal information to learn a powerful representation of a video-level instance, which is used to predict the mask sequences on each frame dynamically. 
 
-- IDOL won first place in the video instance segmentation track of the 4th Large-scale Video Object Segmentation Challenge (CVPR2022). 
+- SeqFormer is a robust, accurate, neat offline model and instance tracking is achieved naturally without tracking branches or post-processing. 
 
 
 <p align="center"><img src="assets/SeqFormer/SeqFormer_arch.png" width="1000"/></p>
