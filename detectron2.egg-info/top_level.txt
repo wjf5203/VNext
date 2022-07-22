@@ -1,2 +1,0 @@
-detectron2
-tools
