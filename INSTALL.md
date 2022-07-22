@@ -19,7 +19,7 @@ pip install git+https://github.com/youtubevos/cocoapi.git#"egg=pycocotools&subdi
 Compiling Deformable DETR CUDA operators:
 
 ```bash
-cd projects/DDETRS/ddetrs/models/ops/
+cd projects/IDOL/idol/models/ops/
 sh make.sh
 ```
 
