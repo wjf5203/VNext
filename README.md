@@ -94,8 +94,11 @@ Junfeng Wu, Yi Jiang, Song Bai, Wenqing Zhang, Xiang Bai
 
 ### Abstract
 
-In this work, we present SeqFormer for video instance segmentation. SeqFormer follows the principle of vision transformer that models instance relationships among video frames. Nevertheless, we observe that a stand-alone instance query suffices for capturing a time sequence of instances in a video, but attention mechanisms shall be done with each frame independently. To achieve this, SeqFormer locates an instance in each frame and aggregates temporal information to learn a powerful representation of a video-level instance, which is used to predict the mask sequences on each frame dynamically. Instance tracking is achieved naturally without tracking branches or post-processing. On YouTube-VIS, SeqFormer achieves 47.4 AP with a ResNet-50 backbone and 49.0 AP with a ResNet-101 backbone without bells and whistles. Such achievement significantly exceeds the previous state-of-the-art performance by 4.6 and 4.4, respectively. We hope SeqFormer could be a strong baseline that fosters future research in video instance segmentation, and in the meantime, advances this field with a more robust, accurate, neat model.
+- In recent years, video instance segmentation (VIS) has been largely advanced by offline models, while online models are usually inferior to the contemporaneous offline models by over 10 AP, which is a huge drawback.
 
+- By dissecting current online models and offline models, we demonstrate that the main cause of the performance gap is the error-prone association and  propose IDOL, which outperforms all online and offline methods on three benchmarks. 
+
+- IDOL won first place in the video instance segmentation track of the 4th Large-scale Video Object Segmentation Challenge (CVPR2022). 
 
 
 <p align="center"><img src="assets/SeqFormer/SeqFormer_arch.png" width="1000"/></p>
