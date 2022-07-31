@@ -11,6 +11,7 @@ MODEL:
   IDOL:
     NUM_CLASSES: 25
     MULTI_CLS_ON: True
+    MERGE_ON_CPU: True
 DATASETS:
   TRAIN: ("ytvis_ovis_train",)
   TEST: ("ytvis_ovis_val",)
