@@ -193,10 +193,13 @@ def instances_to_coco_json_video(inputs, outputs):
 
     ytvis_results = []
     for instance_id, (s, l, m) in enumerate(zip(scores, labels, masks)):
-        segms = [
-            mask_util.encode(np.array(_mask[:, :, None], order="F", dtype="uint8"))[0]
-            for _mask in m
-        ]
+        segms = []
+        for _mask in m:
+            if _mask is not None:
+                segms.append(mask_util.encode(np.array(_mask[:, :, None], order="F", dtype="uint8"))[0])
+            else:
+                segms.append(mask_util.encode(np.array(np.zeros((inputs[0]['height'], inputs[0]['width'],1)), order="F", dtype="uint8"))[0]) 
+
         for rle in segms:
             rle["counts"] = rle["counts"].decode("utf-8")
 

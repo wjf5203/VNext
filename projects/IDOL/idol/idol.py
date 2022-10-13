@@ -433,16 +433,16 @@ class IDOL(nn.Module):
             for n in range(vid_len):
                 mask_i = video_dict[m]['masks'][n]
                 if mask_i is None:    
-                    zero_mask = torch.zeros(1,1,output_h*4,output_w*4).to(video_output_masks).to(self.merge_device)
+                    zero_mask = None # padding None instead of zero mask to save memory
                     masks_list_i.append(zero_mask)
                 else:
-                    pred_mask_i =F.interpolate(mask_i[:,None,:,:],  size=(output_h*4, output_w*4) ,mode="bilinear", align_corners=False).sigmoid().to(self.merge_device)
+                    pred_mask_i =F.interpolate(mask_i[:,None,:,:],  size=(output_h*4, output_w*4) ,mode="bilinear", align_corners=False).sigmoid()
+                    pred_mask_i = pred_mask_i[:,:,:image_sizes[0],:image_sizes[1]] #crop the padding area
+                    pred_mask_i = (F.interpolate(pred_mask_i, size=(ori_size[0], ori_size[1]), mode='nearest')>0.5)[0,0].cpu() # resize to ori video size
                     masks_list_i.append(pred_mask_i)
-            masks_list_i = torch.cat(masks_list_i,dim=1)
             masks_list.append(masks_list_i)
         if len(logits_list)>0:
             pred_cls = torch.stack(logits_list)
-            pred_masks = torch.cat(masks_list,dim=0)
         else:
             pred_cls = []
 
@@ -451,18 +451,12 @@ class IDOL(nn.Module):
                 is_above_thres = torch.where(pred_cls > self.apply_cls_thres)
                 scores = pred_cls[is_above_thres]
                 labels = is_above_thres[1]
-                pred_masks = pred_masks[is_above_thres[0]]
+                out_masks = [masks_list[valid_id] for valid_id in is_above_thres[0]]
             else:
                 scores, labels = pred_cls.max(-1)
-
-            pred_masks = pred_masks[:,:,:image_sizes[0],:image_sizes[1]] #crop the padding area
-            pred_masks = F.interpolate(pred_masks, size=(ori_size[0], ori_size[1]), mode='nearest')
-
-            masks = pred_masks > 0.5
-            
+                out_masks = masks_list
             out_scores = scores.tolist()
             out_labels = labels.tolist()
-            out_masks = [m for m in masks.cpu()]
         else:
             out_scores = []
             out_labels = []
