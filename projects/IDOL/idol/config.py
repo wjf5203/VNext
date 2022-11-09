@@ -57,6 +57,8 @@ def add_idol_config(cfg):
 
     cfg.MODEL.IDOL.TEMPORAL_SCORE_TYPE = 'mean' # mean or max score for sequence masks during inference,
     cfg.MODEL.IDOL.INFERENCE_SELECT_THRES = 0.1  # 0.05 for ytvis
+    cfg.MODEL.IDOL.NMS_PRE =  0.5
+    cfg.MODEL.IDOL.ADD_NEW_SCORE = 0.2
     cfg.MODEL.IDOL.INFERENCE_FW = True #frame weight
     cfg.MODEL.IDOL.INFERENCE_TW = True  #temporal weight
     cfg.MODEL.IDOL.MEMORY_LEN = 3

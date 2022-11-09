@@ -12,6 +12,8 @@ MODEL:
     NUM_CLASSES: 25
     MULTI_CLS_ON: True
     MERGE_ON_CPU: True
+    NMS_PRE:  0.3
+    ADD_NEW_SCORE:  0.3
 DATASETS:
   TRAIN: ("ytvis_ovis_train",)
   TEST: ("ytvis_ovis_val",)

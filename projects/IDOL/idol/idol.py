@@ -91,6 +91,8 @@ class IDOL(nn.Module):
         self.inference_fw = cfg.MODEL.IDOL.INFERENCE_FW
         self.inference_tw = cfg.MODEL.IDOL.INFERENCE_TW
         self.memory_len = cfg.MODEL.IDOL.MEMORY_LEN
+        self.nms_pre = cfg.MODEL.IDOL.NMS_PRE
+        self.add_new_score = cfg.MODEL.IDOL.ADD_NEW_SCORE 
         self.batch_infer_len = cfg.MODEL.IDOL.BATCH_INFER_LEN
 
 
@@ -276,9 +278,9 @@ class IDOL(nn.Module):
             idol_tracker = IDOL_Tracker(
                     init_score_thr= 0.2,
                     obj_score_thr=0.1,
-                    nms_thr_pre=0.5, 
+                    nms_thr_pre=self.nms_pre,  #0.5
                     nms_thr_post=0.05,
-                    addnew_score_thr = 0.2,
+                    addnew_score_thr = self.add_new_score, #0.2
                     memo_tracklet_frames = 10,
                     memo_momentum = 0.8,
                     long_match = self.inference_tw,
