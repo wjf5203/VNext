@@ -31,7 +31,6 @@ Train on YouTube-VIS 2019, evaluate on YouTube-VIS 2019.
 | Backbone                                                     | AP   | AP50 | AP75 | AR1  | AR10 | download                                                     |
 | ------------------------------------------------------------ | ---- | ---- | ---- | ---- | ---- | ------------------------------------------------------------ |
 | [R50](https://github.com/wjf5203/VNext/blob/main/projects/IDOL/configs/ytvis19_r50.yaml) | 49.3 | 74.0 | 52.8 | 47.6 | 58.7 | [model](https://drive.google.com/file/d/1FFbrfbK1oN4zTO5q_cw3zws2Z2Ppuzv7/view?usp=sharing) & [log](https://drive.google.com/file/d/16jqwbEzSkY-qcVZYYJeZ2vj8-Mffm30T/view?usp=share_link) |
-|                                                              |      |      |      |      |      |                                                              |
 | [R50](https://github.com/wjf5203/VNext/blob/main/projects/IDOL/configs/ytvis19_r50.yaml) | 50.2 | 75.1 | 53.6 | 48.4 | 59.3 | [model](https://drive.google.com/file/d/1BAZX99coA23RPrK8He3hDx59j11N7bUa/view?usp=sharing) |
 | [R101](https://github.com/wjf5203/VNext/blob/main/projects/IDOL/configs/ytvis19_r101.yaml) | 50.1 | 73.1 | 56.1 | 47.0 | 57.9 | [model](https://drive.google.com/file/d/1T8S3_tZRcMJ1c5ioe3MGUNwKg9UP5ROW/view?usp=sharing) |
 | [SwinL](https://github.com/wjf5203/VNext/blob/main/projects/IDOL/configs/ytvis19_swinL.yaml) | 64.3 | 87.5 | 71.0 | 55.6 | 69.1 | [model](https://drive.google.com/file/d/1Otlq8eqb_xg0eRF5dQHyxKvuEceOgwBk/view?usp=sharing) |
