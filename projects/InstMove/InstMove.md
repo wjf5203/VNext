@@ -21,7 +21,7 @@ We provide the inference code combining InstMove and MinVIS as a reference, inse
 | w/o motion | 26.2 |
 | w/ motion  | 28.8 |
 
- First, install MinVIS following [INSTALL.md](./MinVIS_motion/INSTALL.md) , then download MinVIS weights and InstMove weights.
+ First, install MinVIS following [INSTALL.md](./MinVIS_motion/INSTALL.md) , then download [MinVIS weights](https://huggingface.co/Junfeng5/InstMove/resolve/main/minvis_ovis_R50.pth) and [InstMove weights](https://huggingface.co/Junfeng5/InstMove/resolve/main/motion_model.pth).
 
 Evaluating on OVIS without motion:
 
