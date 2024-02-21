@@ -20,7 +20,7 @@
 
 To date, VNext contains the official implementation of the following algorithms:
 
-**InstMove**: Instance Motion for Object-centric Video Segmentation (CVPR 2023) -- coming soon :)
+**InstMove**: Instance Motion for Object-centric Video Segmentation (CVPR 2023)
 
 **IDOL**: In Defense of Online Models for Video Instance Segmentation (ECCV2022 Oral)
 
@@ -30,7 +30,7 @@ To date, VNext contains the official implementation of the following algorithms:
 
 ## NEWS!!:
 
-- InstMove is accepted to CVPR 2023, the code and models are coming soon!
+- InstMove is accepted to CVPR 2023, the code and models can be found [here](./projects/InstMove/InstMove.md)!
 - IDOL is accepted to ECCV 2022 as an **oral presentation**!
 - SeqFormer is accepted to ECCV 2022 as an **oral presentation**!
 - IDOL won **first place** in the video instance segmentation track of the 4th Large-scale Video Object Segmentation Challenge (CVPR2022).
