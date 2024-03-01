@@ -365,6 +365,8 @@ class IDOL(nn.Module):
             det_bboxes = torch.cat([output_boxes[indices],box_score.unsqueeze(1)],dim=1)
             det_labels = torch.argmax(logits.sigmoid()[indices],dim=1)
             track_feats = output_embed[indices]
+            if isinstance(indices, torch.Tensor):
+                indices = indices.cpu()
             det_masks = output_mask[indices]
             bboxes, labels, ids, indices = tracker.match(
             bboxes=det_bboxes,
